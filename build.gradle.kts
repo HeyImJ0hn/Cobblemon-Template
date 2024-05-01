@@ -9,12 +9,7 @@ group = property("maven_group")!!
 version = property("mod_version")!!
 
 repositories {
-    maven {
-        url = uri("https://cursemaven.com")
-        content {
-            includeGroup("curse.maven")
-        }
-    }
+    maven("https://maven.impactdev.net/repository/development/")
 }
 
 dependencies {
@@ -23,7 +18,7 @@ dependencies {
     modImplementation("net.fabricmc:fabric-loader:${property("loader_version")}")
 
     modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_api_version")}")
-    modImplementation("curse.maven:cobblemon-687131:${property("cobblemon_curse_file_id")}")
+    modImplementation("com.cobblemon:fabric:${property("cobblemon_version")}")
 }
 
 tasks {
